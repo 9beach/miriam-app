@@ -326,6 +326,8 @@
         color: var(--fg-on-dark-muted);
       }
       .phone img, .phone video { width: 100%; height: 100%; object-fit: cover; }
+      .phone:has(img) { padding: 0; }
+      .hero-phone:has(img) { padding: 0; }
 
       .phone-multi {
         display: flex; gap: 12px;
@@ -364,6 +366,14 @@
         font-family: ui-monospace, "SF Mono", Menlo, monospace;
         text-align: center;
         padding: 10px;
+        overflow: hidden;
+      }
+      .share-card:has(img) {
+        aspect-ratio: auto;
+        padding: 0;
+      }
+      .share-card img {
+        width: 100%; height: auto; display: block;
       }
       .share-card.highlight {
         border-color: color-mix(in srgb, var(--accent) 40%, var(--ink-rule));
@@ -621,9 +631,7 @@
 
           <div class="hero-proof reveal" aria-label="Miriam Summary 화면">
             <div class="hero-phone">
-              <!-- TODO: docs/screenshots/hero-summary.png — Summary 탭 (링 + 카드들) -->
-              <!-- <img src="screenshots/hero-summary.png" alt="Summary 탭" /> -->
-              Summary 스크린샷
+              <img src="screenshots/hero-summary.jpg" alt="Miriam Summary 탭 — 목표 링과 최근 활동 카드" />
             </div>
           </div>
         </div>
@@ -671,12 +679,9 @@
       <div class="stage reveal">
         <span class="visual-tag">멀티샷 · 3 화면</span>
         <div class="phone-multi">
-          <!-- TODO: docs/screenshots/stats-period.png -->
-          <div class="phone">기간별 추이</div>
-          <!-- TODO: docs/screenshots/stats-distance.png -->
-          <div class="phone">표준 거리별 추이</div>
-          <!-- TODO: docs/screenshots/stats-course.png -->
-          <div class="phone">코스별 추이</div>
+          <div class="phone"><img src="screenshots/stats-period.jpg" alt="2026년 기간별 추이 차트" /></div>
+          <div class="phone"><img src="screenshots/stats-distance.jpg" alt="5K 완주 기준 표준 거리별 추이" /></div>
+          <div class="phone"><img src="screenshots/stats-course.jpg" alt="밤섬 반환 코스의 페이스·심박 추이" /></div>
         </div>
       </div>
     </section>
@@ -696,10 +701,8 @@
           <div class="visual reveal">
             <span class="visual-tag">멀티샷 · 2 화면</span>
             <div class="phone-multi">
-              <!-- TODO: docs/screenshots/courses-list.png -->
-              <div class="phone">코스 목록</div>
-              <!-- TODO: docs/screenshots/courses-detail.png -->
-              <div class="phone">코스별 추이</div>
+              <div class="phone"><img src="screenshots/courses-list.jpg" alt="등록한 코스 목록" /></div>
+              <div class="phone"><img src="screenshots/courses-detail.jpg" alt="성산교 반환 코스 세부사항" /></div>
             </div>
           </div>
         </div>
@@ -722,12 +725,9 @@
           <div class="visual reveal">
             <span class="visual-tag">멀티샷 · 3 화면</span>
             <div class="phone-multi">
-              <!-- TODO: docs/screenshots/ranking-10k-best.png -->
-              <div class="phone">10K · 베스트 정렬</div>
-              <!-- TODO: docs/screenshots/ranking-course-hr.png -->
-              <div class="phone">코스 · 평균 심박 정렬</div>
-              <!-- TODO: docs/screenshots/ranking-elevation.png -->
-              <div class="phone">전체 · 고도 상승 정렬</div>
+              <div class="phone"><img src="screenshots/ranking-10k-best.jpg" alt="10K 완주 — 최고 구간 기록 정렬" /></div>
+              <div class="phone"><img src="screenshots/ranking-course-hr.jpg" alt="성산교 반환 코스 — 평균 심박 정렬" /></div>
+              <div class="phone"><img src="screenshots/ranking-elevation.jpg" alt="전체 세션 — 상승 고도 정렬" /></div>
             </div>
           </div>
         </div>
@@ -748,8 +748,7 @@
           </div>
           <div class="visual reveal">
             <span class="visual-tag">정적 · 1 화면</span>
-            <!-- TODO: docs/screenshots/goals-streak.png -->
-            <div class="phone">목표 · 스트릭</div>
+            <div class="phone"><img src="screenshots/goals-streak.jpg" alt="매주 한 번 10km 달리기 — 17주 연속 달성" /></div>
           </div>
         </div>
       </div>
@@ -768,15 +767,10 @@
             </p>
           </div>
           <div class="visual reveal">
-            <!-- NOTE: 비교 화면은 세로 스크롤이 길어 단독 정적 샷 부족.   -->
-            <!-- 멀티샷(스크롤 영역 분할) 또는 애니메이션(loop) 중 추후    -->
-            <!-- 결정. 일단 멀티샷·2.                                       -->
-            <span class="visual-tag">멀티샷 · 2 화면 (또는 애니메이션 — 미정)</span>
+            <span class="visual-tag">멀티샷 · 2 화면</span>
             <div class="phone-multi">
-              <!-- TODO: docs/screenshots/compare-1.png OR compare.webm -->
-              <div class="phone">비교 — 상단</div>
-              <!-- TODO: docs/screenshots/compare-2.png -->
-              <div class="phone">비교 — 하단</div>
+              <div class="phone"><img src="screenshots/compare-1.jpg" alt="러닝 상세 — 수상 finish 10K 와 세부사항" /></div>
+              <div class="phone"><img src="screenshots/compare-2.jpg" alt="비교 시트 — 1개월·동일 코스 4개 세션 대비 변화" /></div>
             </div>
           </div>
         </div>
@@ -798,10 +792,8 @@
           <div class="visual reveal">
             <span class="visual-tag">멀티샷 · 2 화면</span>
             <div class="phone-multi">
-              <!-- TODO: docs/screenshots/awards-belt.png -->
-              <div class="phone">벨트 · 섹션 헤더</div>
-              <!-- TODO: docs/screenshots/awards-records.png -->
-              <div class="phone">개인 기록 · 연간 메달</div>
+              <div class="phone"><img src="screenshots/awards-belt.jpg" alt="갈색띠 — 개인 기록과 목표 연속 달성" /></div>
+              <div class="phone"><img src="screenshots/awards-records.jpg" alt="마일리지 달성과 연간 메달" /></div>
             </div>
           </div>
         </div>
@@ -822,36 +814,12 @@
         <div class="reveal">
           <span class="visual-tag">카드 그리드 · 6 종류</span>
           <div class="share-grid">
-            <!-- TODO: docs/screenshots/share-session.png -->
-            <div class="share-card highlight">
-              <span class="label">Session</span>
-              <span class="name">세션 카드</span>
-            </div>
-            <!-- TODO: docs/screenshots/share-daily.png -->
-            <div class="share-card">
-              <span class="label">Daily</span>
-              <span class="name">하루</span>
-            </div>
-            <!-- TODO: docs/screenshots/share-weekly.png -->
-            <div class="share-card">
-              <span class="label">Weekly</span>
-              <span class="name">주간</span>
-            </div>
-            <!-- TODO: docs/screenshots/share-monthly.png -->
-            <div class="share-card">
-              <span class="label">Monthly</span>
-              <span class="name">월간</span>
-            </div>
-            <!-- TODO: docs/screenshots/share-yearly.png -->
-            <div class="share-card">
-              <span class="label">Yearly</span>
-              <span class="name">연간</span>
-            </div>
-            <!-- TODO: docs/screenshots/share-lifetime.png -->
-            <div class="share-card">
-              <span class="label">Lifetime</span>
-              <span class="name">라이프타임</span>
-            </div>
+            <div class="share-card highlight"><img src="screenshots/share-session.jpg" alt="세션 카드 — 10K 한강 코스 지도" /></div>
+            <div class="share-card"><img src="screenshots/share-daily.jpg" alt="하루 카드 — 2.02km" /></div>
+            <div class="share-card"><img src="screenshots/share-weekly.jpg" alt="주간 카드 — 5월 18일~24일, 22km · 4 runs" /></div>
+            <div class="share-card"><img src="screenshots/share-monthly.jpg" alt="월간 카드 — 4월, 171km · 22 runs" /></div>
+            <div class="share-card"><img src="screenshots/share-yearly.jpg" alt="연간 카드 — 2026년, 602km · 92 runs" /></div>
+            <div class="share-card"><img src="screenshots/share-lifetime.jpg" alt="라이프타임 카드 — 2,481km · 498 runs" /></div>
           </div>
         </div>
       </div>
@@ -863,33 +831,27 @@
         <h3 class="basics-head">기본 기능</h3>
         <div class="basics-grid">
           <div class="basics-item">
-            <!-- TODO: docs/screenshots/basics-summary.png -->
-            <div class="phone">요약 카드</div>
+            <div class="phone"><img src="screenshots/basics-summary.jpg" alt="요약 카드" /></div>
             <span class="basics-label">요약 카드</span>
           </div>
           <div class="basics-item">
-            <!-- TODO: docs/screenshots/basics-detail.png -->
-            <div class="phone">상세 차트</div>
+            <div class="phone"><img src="screenshots/basics-detail.jpg" alt="러닝 상세 차트" /></div>
             <span class="basics-label">러닝 상세 차트</span>
           </div>
           <div class="basics-item">
-            <!-- TODO: docs/screenshots/basics-segments.png -->
-            <div class="phone">구간 분석</div>
+            <div class="phone"><img src="screenshots/basics-segments.jpg" alt="km 단위 구간 분석" /></div>
             <span class="basics-label">구간 분석</span>
           </div>
           <div class="basics-item">
-            <!-- TODO: docs/screenshots/basics-hr-zones.png -->
-            <div class="phone">심박존</div>
+            <div class="phone"><img src="screenshots/basics-hr-zones.jpg" alt="심박 영역" /></div>
             <span class="basics-label">심박존</span>
           </div>
           <div class="basics-item">
-            <!-- TODO: docs/screenshots/basics-map.png -->
-            <div class="phone">코스 지도</div>
+            <div class="phone"><img src="screenshots/basics-map.jpg" alt="코스 지도" /></div>
             <span class="basics-label">코스 지도</span>
           </div>
           <div class="basics-item">
-            <!-- TODO: docs/screenshots/basics-darklight.png -->
-            <div class="phone">다크 / 라이트</div>
+            <div class="phone"><img src="screenshots/basics-darklight.jpg" alt="다크 / 라이트 모드" /></div>
             <span class="basics-label">다크 / 라이트 모드</span>
           </div>
         </div>
@@ -909,10 +871,11 @@
           <div>
             <div class="list-title">확인 항목</div>
             <ul class="list-tight">
+              <li>다양한 UI에서 아쉬운 점은 없는가</li>
+              <li>목표 스트릭이 직관적으로 읽히는가</li>
               <li>요약 카드의 정보가 직관적으로 읽히는가</li>
               <li>러닝 추가 직후 알림 타이밍이 적절한가</li>
               <li>오래된 러닝(수년 전)이 전부 임포트되는가</li>
-              <li>목표 스트릭이 실제 활동과 일치하는가</li>
               <li>세션 순위 필터·정렬 결과가 정확한가</li>
               <li>공유 카드 이미지 품질과 정보 배치</li>
               <li>다크 / 라이트 모드에서 어색한 부분</li>
@@ -922,9 +885,6 @@
             <div class="list-title">현재 제약</div>
             <ul class="list-tight">
               <li>실내 러닝은 GPS·위치가 없어 지도 표시 불가</li>
-              <li>HealthKit 권한을 모두 허용해야 데이터가 보임</li>
-              <li>스키마 변경 시 첫 실행에서 재임포트 발생</li>
-              <li>iCloud 동기화는 정식 출시 후 활성화 예정</li>
             </ul>
           </div>
         </div>
