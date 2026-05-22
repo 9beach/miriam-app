@@ -1,0 +1,33 @@
+name: 기능 제안
+description: 새 기능이나 개선 아이디어를 알려주세요.
+title: "[제안] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        같은 제안이 이미 있는지 [열린 이슈](https://github.com/9beach/miriam-app/issues?q=is%3Aissue+label%3Aenhancement)를 한 번 검색해 주시면 좋습니다.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 어떤 상황에서 불편하셨나요?
+      description: 해결하려는 문제부터 적어 주시면 다양한 해법을 고민할 수 있습니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: 제안하는 동작
+      description: 머릿속에 그려지는 화면이나 흐름이 있다면 함께 적어 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 다른 방법은 시도해 보셨나요? (선택)
+      description: 기존 기능으로 우회한 적이 있다면, 어떤 부분이 부족했는지 알려 주세요.
+    validations:
+      required: false

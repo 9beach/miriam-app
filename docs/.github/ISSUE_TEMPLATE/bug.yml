@@ -1,0 +1,62 @@
+name: 버그 제보
+description: Miriam 사용 중 발견한 문제를 알려주세요.
+title: "[버그] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        스크린샷에 개인정보(이름, 위치, 정확한 시간 등)가 보이면 가리고 올려주세요.
+
+        같은 문제가 이미 보고되어 있는지 [열린 이슈](https://github.com/9beach/miriam-app/issues)를 한 번 검색해 주시면 좋습니다.
+
+  - type: input
+    id: device
+    attributes:
+      label: 기기 · iOS 버전
+      placeholder: "iPhone 15 Pro · iOS 18.2"
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: Miriam 빌드
+      description: TestFlight 앱 또는 Miriam → 설정 → 정보에서 확인할 수 있습니다.
+      placeholder: "1.0 (42)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 무슨 일이 일어났나요?
+      description: 어떤 동작이 잘못되었는지 한두 문장으로 설명해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 재현 단계
+      placeholder: |
+        1. 요약 탭 진입
+        2. 최근 러닝 카드 탭
+        3. ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 예상한 동작
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 스크린샷 · 동영상 (선택)
+      description: 드래그앤드롭으로 첨부됩니다. 개인정보가 보이면 가려 주세요.
+    validations:
+      required: false
