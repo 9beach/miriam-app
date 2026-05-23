@@ -293,6 +293,15 @@
         color: var(--fg-on-light-soft);
       }
       section.dark .sec-head p { color: var(--fg-on-dark-soft); }
+      .sec-head p a {
+        color: var(--fg-on-dark);
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+        transition: color 0.2s;
+      }
+      .sec-head p a:hover { color: var(--accent); }
 
       /* ===== FEATURE ROW ===== */
       .row {
