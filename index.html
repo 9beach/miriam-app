@@ -166,10 +166,9 @@
         position: relative;
         width: min(330px, 86vw);
         aspect-ratio: 9 / 19.5;
-        border-radius: 38px;
-        border: 7px solid #1a1a1a;
-        background: #1a1a1a;
-        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.5);
+        background: #000;
+        border: 9px solid #2c2c2e;
+        border-radius: 11.5% / 5.3%;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -179,6 +178,9 @@
         font-size: 13px;
         text-align: center;
         padding: 18px;
+        box-shadow:
+          0 28px 70px rgba(0, 0, 0, 0.55),
+          0 8px 18px rgba(0, 0, 0, 0.32);
       }
       .hero-phone img,
       .hero-phone video {
@@ -345,21 +347,25 @@
       .phone {
         width: 100%; max-width: 300px;
         aspect-ratio: 9 / 19.5;
-        background: #1a1a1a;
-        border: 6px solid #1a1a1a;
-        border-radius: 34px;
+        background: #050505;
+        border: 8px solid #1c1c1e;
+        border-radius: 11.5% / 5.3%;
         overflow: hidden;
         display: flex; align-items: center; justify-content: center;
         color: var(--fg-on-dark-muted);
         font-size: 12px; text-align: center;
         padding: 14px;
         font-family: ui-monospace, "SF Mono", Menlo, monospace;
-        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.12);
+        box-shadow:
+          0 18px 44px rgba(0, 0, 0, 0.22),
+          0 4px 10px rgba(0, 0, 0, 0.14);
       }
       section.dark .phone {
-        background: #262626;
-        border-color: #262626;
-        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
+        background: #000;
+        border-color: #2c2c2e;
+        box-shadow:
+          0 22px 56px rgba(0, 0, 0, 0.6),
+          0 4px 12px rgba(0, 0, 0, 0.32);
       }
       .phone img, .phone video { width: 100%; height: 100%; object-fit: cover; }
       .phone:has(img) { padding: 0; }
@@ -380,13 +386,10 @@
       /* Share-card visuals */
       .share-grid {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
       }
-      @media (max-width: 1000px) {
-        .share-grid { grid-template-columns: repeat(3, 1fr); }
-      }
-      @media (max-width: 520px) {
+      @media (max-width: 880px) {
         .share-grid { grid-template-columns: repeat(2, 1fr); }
       }
       .share-card {
@@ -503,8 +506,7 @@
       }
       .basics-item .phone {
         max-width: none; width: 100%;
-        border-radius: 22px;
-        border-width: 4px;
+        border-width: 5px;
         font-size: 11px;
       }
       .basics-label {
@@ -844,13 +846,11 @@
           </p>
         </div>
         <div class="reveal">
-          <span class="visual-tag">카드 그리드 · 6 종류</span>
+          <span class="visual-tag">카드 그리드 · 4 종류</span>
           <div class="share-grid">
             <div class="share-card highlight"><img src="screenshots/share-session.jpg" alt="세션 카드 — 10K 한강 코스 지도" /></div>
-            <div class="share-card"><img src="screenshots/share-daily.jpg" alt="하루 카드 — 2.02km" /></div>
             <div class="share-card"><img src="screenshots/share-weekly.jpg" alt="주간 카드 — 5월 18일~24일, 22km · 4 runs" /></div>
             <div class="share-card"><img src="screenshots/share-monthly.jpg" alt="월간 카드 — 4월, 171km · 22 runs" /></div>
-            <div class="share-card"><img src="screenshots/share-yearly.jpg" alt="연간 카드 — 2026년, 602km · 92 runs" /></div>
             <div class="share-card"><img src="screenshots/share-lifetime.jpg" alt="라이프타임 카드 — 2,481km · 498 runs" /></div>
           </div>
         </div>
