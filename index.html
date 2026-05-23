@@ -495,6 +495,48 @@
       }
       .stats .stage .phone-multi .phone { max-width: 320px; }
 
+      /* ===== GOALS — full-bleed ===== */
+      .goals { padding: 124px 0 0; }
+      .goals .container {
+        max-width: 880px;
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      .goals h2 {
+        font-size: 56px;
+        line-height: 1.1;
+        margin-bottom: 22px;
+        letter-spacing: 0;
+      }
+      @media (max-width: 820px) {
+        .goals h2 { font-size: 36px; }
+      }
+      .goals p.sub {
+        font-size: 18px;
+        color: var(--fg-on-dark-soft);
+        line-height: 1.6;
+        margin: 0 auto;
+        max-width: 50ch;
+      }
+      .goals .stage {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 var(--gutter) 124px;
+      }
+      .goals .stage .visual-tag {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 28px;
+      }
+      .goals .stage .phone-multi {
+        justify-content: center;
+      }
+      .goals .stage .phone-multi .phone {
+        flex: 0 0 auto;
+        max-width: 320px;
+        width: 100%;
+      }
+
       /* ===== BASICS ===== */
       .basics { padding: 96px 0; }
       .basics h3.basics-head {
@@ -642,10 +684,10 @@
         </a>
         <div class="links">
           <a href="#stats">통계</a>
+          <a href="#goals">목표</a>
           <a href="#courses">코스</a>
           <a href="#ranking">순위</a>
           <a href="#compare">비교</a>
-          <a href="#goals">목표</a>
           <a href="#awards">수상</a>
           <a href="#share">공유</a>
         </div>
@@ -730,7 +772,25 @@
       </div>
     </section>
 
-    <!-- ===== 2. COURSES ===== -->
+    <!-- ===== 2. GOALS / STREAK ===== -->
+    <section class="goals dark" id="goals" data-nav="dark">
+      <div class="container reveal">
+        <h2>목표를 만들고 연속 기록을 이어가세요.</h2>
+        <p class="sub">
+          주간 거리, 월간 횟수, 10K 한 번 같은 목표를 만들면 기간마다 달성 여부가
+          기록됩니다. 연속 달성이 스트릭으로 이어지고, 17주·30주가 쌓일수록
+          다음 주를 비워두지 않을 이유가 됩니다.
+        </p>
+      </div>
+      <div class="stage reveal">
+        <span class="visual-tag">정적 · 1 화면</span>
+        <div class="phone-multi">
+          <div class="phone"><img src="screenshots/goals-streak.jpg" alt="매주 한 번 10km 달리기 — 17주 연속 달성" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. COURSES ===== -->
     <section class="light" id="courses" data-nav="light">
       <div class="container">
         <div class="row">
@@ -753,7 +813,7 @@
       </div>
     </section>
 
-    <!-- ===== 3. SESSION RANKING ===== -->
+    <!-- ===== 4. SESSION RANKING ===== -->
     <section class="softlight" id="ranking" data-nav="light">
       <div class="container">
         <div class="row reverse">
@@ -778,7 +838,7 @@
       </div>
     </section>
 
-    <!-- ===== 4. COMPARE ===== -->
+    <!-- ===== 5. COMPARE ===== -->
     <section class="light" id="compare" data-nav="light">
       <div class="container">
         <div class="row">
@@ -801,28 +861,8 @@
       </div>
     </section>
 
-    <!-- ===== 5. GOALS / STREAK ===== -->
-    <section class="softlight" id="goals" data-nav="light">
-      <div class="container">
-        <div class="row reverse">
-          <div class="text reveal">
-            <h2>목표 달성을 스트릭으로 셉니다.</h2>
-            <p>
-              주간 거리, 월간 횟수, 10K 한 번 같은 사용자 정의 목표를 만들면
-              기간마다 달성 여부가 기록되고 연속 달성 스트릭으로 이어집니다.
-              기본 목표도 바로 시작할 수 있어, 베타 첫 주부터 변화가 보입니다.
-            </p>
-          </div>
-          <div class="visual reveal">
-            <span class="visual-tag">정적 · 1 화면</span>
-            <div class="phone"><img src="screenshots/goals-streak.jpg" alt="매주 한 번 10km 달리기 — 17주 연속 달성" /></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== 6. AWARDS ===== -->
-    <section class="light" id="awards" data-nav="light">
+    <section class="softlight" id="awards" data-nav="light">
       <div class="container">
         <div class="row">
           <div class="text reveal">
