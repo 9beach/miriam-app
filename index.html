@@ -226,7 +226,7 @@
       }
       .imprint-grid {
         display: grid;
-        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
         gap: 56px;
         align-items: center;
       }
@@ -248,13 +248,10 @@
         line-height: 1.65;
         max-width: 42ch;
       }
-      .imprint-card {
-        border-radius: 18px;
-        overflow: hidden;
-        border: 1px solid var(--ink-rule);
-        background: #000;
+      .imprint-visual {
+        display: flex;
+        justify-content: center;
       }
-      .imprint-card img { width: 100%; display: block; }
 
       .btn {
         display: inline-flex; align-items: center; gap: 8px;
@@ -683,11 +680,11 @@
             <h2>수년치 러닝이,<br />한 화면으로.</h2>
             <p>
               HealthKit에 흩어져 있던 러닝이 미리엄을 처음 켜는 순간 모두 정렬됩니다.
-              누적 거리·시간, 라이프타임 평균 페이스·심박·케이던스가 함께 보입니다.
+              누적 거리·시간, 벨트 등급, 개인 기록, 마일리지 달성이 한 화면에 펼쳐집니다.
             </p>
           </div>
-          <div class="imprint-card">
-            <img src="screenshots/share-lifetime.jpg" alt="라이프타임 카드 — 2,481km · 498 RUNS" />
+          <div class="imprint-visual">
+            <div class="phone"><img src="screenshots/awards-belt.jpg" alt="수상 탭 — 누적 2,481km · 498 RUNS, 갈색띠, 개인 기록과 마일리지 달성" /></div>
           </div>
         </div>
       </div>
