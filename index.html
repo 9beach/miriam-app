@@ -248,6 +248,10 @@
       aspect-ratio: 9 / 19.5;
       filter:
         drop-shadow(0 26px 60px rgba(0, 0, 0, 0.55)) drop-shadow(0 8px 18px rgba(0, 0, 0, 0.3));
+      /* Same GPU-promotion fix as .phone */
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     .hero-phone::after {
@@ -550,6 +554,12 @@
       aspect-ratio: 9 / 19.5;
       filter:
         drop-shadow(0 18px 36px rgba(0, 0, 0, 0.22)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.14));
+      /* Force GPU compositing from initial paint —
+         mobile Safari otherwise rasterizes drop-shadow on CPU first,
+         producing aliased corners until a scroll triggers re-render. */
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     .phone::after {
@@ -892,35 +902,18 @@
     .channels {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      border-top: 1px solid var(--paper-rule);
+      gap: 40px;
     }
 
     @media (max-width: 760px) {
       .channels {
         grid-template-columns: 1fr;
+        gap: 32px;
       }
     }
 
     .channel {
-      padding: 28px 28px 28px 0;
-      border-right: 1px solid var(--paper-rule);
-    }
-
-    .channel:last-child {
-      border-right: none;
-    }
-
-    @media (max-width: 760px) {
-      .channel {
-        border-right: none;
-        border-bottom: 1px solid var(--paper-rule);
-        padding: 24px 0;
-      }
-
-      .channel:last-child {
-        border-bottom: none;
-      }
+      padding: 0;
     }
 
     .channel h3 {
@@ -1218,9 +1211,7 @@
         <div class="text reveal">
           <h2>모든 기록은 한곳에,<br />누적거리는 벨트로</h2>
           <p>
-            개인 기록, 목표 연속 달성, 마일리지, 연간 메달이 한 화면에 분류되어 보입니다.
-            누적 거리는 흰띠에서 파란띠, 보라띠를 거쳐 검은띠, 빨간띠로 이어지는 벨트 등급으로 남아,
-            장기적인 러닝의 역사를 보여 줍니다.
+            개인 기록, 목표 연속 달성, 마일리지, 연간 메달을 한눈에 확인하세요. 누적 거리는 흰띠부터 파란띠·보라띠를 거쳐 검은띠·빨간띠까지, 벨트 등급으로 장기적인 러닝 여정을 보여줍니다.
           </p>
         </div>
         <div class="visual reveal">
@@ -1238,7 +1229,7 @@
   <section class="dark" id="share" data-nav="dark">
     <div class="container">
       <div class="sec-head reveal">
-        <h2>기록 카드를 친구와 공유하세요</h2>
+        <h2>공유 카드를 친구에게 보내세요</h2>
         <p>
           공유 카드는 두 갈래입니다. 한 건의 러닝을 지도와 배지로 정리한
           세션 카드, 그리고 하루 · 주간 · 월간 · 연간 · 라이프타임을 요약한
